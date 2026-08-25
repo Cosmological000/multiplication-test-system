@@ -1,7 +1,7 @@
 <?php
 $host = "sakura.proxy.rlwy.net";
 $user = "root";
-$pass = "your_actual_mysql_password";
+$pass = "ofcvNRzkpHfbwIXFWHdWkhmagZrOCdzx";
 $db   = "railway";
 $port = 38834;
 
