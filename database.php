@@ -1,52 +1,15 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Database Connection
-|--------------------------------------------------------------------------
-| Project: Multiplication Intelligence Test System
-| Environment: XAMPP Localhost
-|--------------------------------------------------------------------------
-*/
+$host = "sakura.proxy.rlwy.net";
+$user = "root";
+$pass = "your_actual_mysql_password";
+$db   = "railway";
+$port = 38834;
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "multiplication_test";
-
-/*
-|--------------------------------------------------------------------------
-| Create Connection
-|--------------------------------------------------------------------------
-*/
-
-$conn = new mysqli($host, $username, $password, $database);
-
-/*
-|--------------------------------------------------------------------------
-| Check Connection
-|--------------------------------------------------------------------------
-*/
+$conn = new mysqli($host, $user, $pass, $db, $port);
 
 if ($conn->connect_error) {
-    die("Database Connection Failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
-
-/*
-|--------------------------------------------------------------------------
-| Character Set
-|--------------------------------------------------------------------------
-*/
 
 $conn->set_charset("utf8mb4");
-
-/*
-|--------------------------------------------------------------------------
-| Helper Function (Optional)
-|--------------------------------------------------------------------------
-*/
-
-function sanitize($data)
-{
-    return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
-}
 ?>
