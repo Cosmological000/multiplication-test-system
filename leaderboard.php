@@ -6,7 +6,7 @@ if (!isset($_SESSION['role'])) {
     exit();
 }
 
-require_once "config/database.php";
+require_once("database.php");
 
 /*
 |--------------------------------------------------------------------------
