@@ -1,9 +1,9 @@
 <?php
-$host = "sakura.proxy.rlwy.net";
-$user = "root";
-$pass = "ofcvNRzkpHfbwIXFWHdWkhmagZrOCdzx";
-$db   = "railway";
-$port = 38834;
+$host = $_ENV['MYSQLHOST'];
+$user = $_ENV['MYSQLUSER'];
+$pass = $_ENV['MYSQLPASSWORD'];
+$db   = $_ENV['MYSQLDATABASE'];
+$port = $_ENV['MYSQLPORT'];
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 
